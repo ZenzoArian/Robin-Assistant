@@ -1,0 +1,14 @@
+.main-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.padding-mobile {
+    width: 300px;
+    height: 100%;
+}
+
+.image--div img {
+    width: 100%;
+}
