@@ -4,6 +4,15 @@ html, body {
     height: 100%;
 }
 
+@font-face {
+    font-family: Gilroy-Light;
+    src: url(../font/Gilroy-FREE/Gilroy-Light.otf);
+ }
+ 
+ * {
+    font-family: Gilroy-Light;
+ }
+
 .main-mobile--container {
     display: flex;
     justify-content: center;
