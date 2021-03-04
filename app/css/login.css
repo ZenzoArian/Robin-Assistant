@@ -10,12 +10,8 @@
     margin-top: 80px;
 }
 
-.image--div {
-    margin: 0 0 100px 0;
-}
-.image--div img {
-    width: 100%;
-}
+.image--div {margin: 0 0 100px 0;}
+.image--div img {width: 100%;}
 
 .input--div input {
     margin: 0 0 15px 0;
@@ -31,12 +27,18 @@
     color: #1A1818;
     opacity: 50%;
 }
-.input--div input:focus, textarea:focus, select:focus{
+.input--div input:focus, textarea:focus, select:focus, button:focus{
     outline: none;
 }
 
+.error-input {
+    margin: 0 0 -32px 275px;
+    position: relative;
+    width: 15px;
+    display: none;
+}
+
 .button--div {
-    margin: 80px 0 0 0;
     text-align: center;
 }
 .button--div .loginButton {
@@ -47,9 +49,17 @@
     border-radius: 30px;
     color: #928FDF;
     font-size: 16px;
+    transition: .3s ease;
 }
 .button--div .loginButton:hover {
     cursor: pointer;
+}
+.button--div .loginButton:focus, 
+.button--div .loginButton:visited, 
+.button--div .loginButton:hover {
+    color: #ffffff;
+    background-color: #928FDF;
+    transition: .3s ease;
 }
 .button--div .forgotPassword--div {
     margin: 10px 0 0 0;
@@ -58,4 +68,11 @@
     color: #928FDF;
     text-decoration: none;
     font-size: 12px;
+}
+
+.error-text {
+    visibility: hidden;
+    text-align: center;
+    margin: 20px 0 40px 0;
+    color: red;
 }
