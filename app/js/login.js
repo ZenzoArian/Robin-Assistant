@@ -1,35 +1,52 @@
-var x = document.forms["loginForm"]["emailLogin"].value;
-var y = document.forms["loginForm"]["passwordLogin"].value;
+var x = document.getElementById("emailLogin");
+var y = document.getElementById("passwordLogin");
+let inputMail = document.getElementById('emailLogin');
+let inputPassword = document.getElementById('passwordLogin');
 
 function loginFunction() {
 
-    if (x == "" && y == "") {
+    if (x.value.length == 0 && y.value.length == 0) {
         document.getElementById('error-input-email').style.display = 'unset';
         document.getElementById('error-input-password').style.display = 'unset';
         document.getElementById('emailLogin').style.marginBottom = '-4px';
         document.getElementById('input--div').style.marginTop = '-18px';
         document.getElementById('error-text').style.visibility = 'unset';
+        document.getElementById('emailLogin').style.borderColor = 'rgb(229, 37, 98, .5)';
+        document.getElementById('passwordLogin').style.borderColor = 'rgb(229, 37, 98, .5)';
+        inputMail.classList.add('your-class');
+        inputPassword.classList.add('your-class');
         return false;
     }
-    else if (x == "") {
+    else if (x.value.length == 0) {
         document.getElementById('error-input-email').style.display = 'unset';
         document.getElementById('input--div').style.marginTop = '-18px';
         document.getElementById('error-text').style.visibility = 'unset';
+        document.getElementById('emailLogin').style.borderColor = 'rgb(229, 37, 98, .5)';
+        inputMail.classList.add('your-class');
         return false;
     }
-    else if (y == "") {
+    else if (y.value.length == 0) {
         document.getElementById('error-input-password').style.display = 'unset';
         document.getElementById('emailLogin').style.marginBottom = '-4px';
         document.getElementById('error-text').style.visibility = 'unset';
+        document.getElementById('passwordLogin').style.borderColor = 'rgb(229, 37, 98, .5)';
+        inputPassword.classList.add('your-class');
         return false;
     } else {
-        return true
+        return true;
     }
 
 }
 
-if (x == "" && y == "") {
-    
-} else {
-    document.getElementById('error-input-email').style.display = 'unset';
+inputMail.oninput = handleInput;
+inputPassword.oninput = handleInput;
+
+function handleInput() {
+    if (x.value.length > 0 && y.value.length > 0) {
+        document.getElementById('loginButton').style.color = '#fff';
+        document.getElementById('loginButton').style.backgroundColor = '#928FDF';
+    } else {
+        document.getElementById('loginButton').style.color = '#928FDF';
+        document.getElementById('loginButton').style.backgroundColor = '#fff';
+    }
 }

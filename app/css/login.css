@@ -41,7 +41,7 @@
 .button--div {
     text-align: center;
 }
-.button--div .loginButton {
+.button--div button {
     width: 100%;
     height: 45px;
     background-color: transparent;
@@ -51,20 +51,14 @@
     font-size: 16px;
     transition: .3s ease;
 }
-.button--div .loginButton:hover {
+.button--div button:hover {
     cursor: pointer;
 }
-.button--div .loginButton:focus, 
-.button--div .loginButton:visited, 
-.button--div .loginButton:hover {
-    color: #ffffff;
-    background-color: #928FDF;
-    transition: .3s ease;
-}
-.button--div .forgotPassword--div {
+
+.button--div .forgotPassword--div, .button--div .singIn--div {
     margin: 10px 0 0 0;
 }
-.button--div .forgotPassword--div .forgotPasswordLink {
+.button--div .forgotPassword--div .forgotPasswordLink, .button--div .singIn--div .singInLink {
     color: #928FDF;
     text-decoration: none;
     font-size: 12px;
@@ -74,5 +68,9 @@
     visibility: hidden;
     text-align: center;
     margin: 20px 0 40px 0;
-    color: red;
+    color: #E52562;
 }
+
+.input--div input.your-class::placeholder {
+    color: #E52562
+ }
