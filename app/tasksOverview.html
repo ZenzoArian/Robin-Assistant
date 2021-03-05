@@ -7,27 +7,30 @@
         <link rel=stylesheet href="css/taskOverview.css" >
     </head>
 
-    <body>
+    <body onload="switchDisplay('day')">
         <div class="main-mobile--container">
             <div class="main-mobile">
-                <div class="date--container">
+                <div class="date--container" id="date--container">
                     <div><p>08:21</p></div>
                     <div><p>Wednesday, 3 February 2021</p></div>
-                    <div><p>dates dates dates</p></div>
+                    <div class="days--container">
+                        <div id="days--names"></div> <!-- Generated with js on line: 1 -->
+                        <div id="days--numbers"></div> <!-- Generated with js on line: 16 -->
+                    </div>
                 </div>
                 <div class="nav--container">
                     <div class="nav--items">
-                        <button>Day</button>
-                        <button>Week</button>
-                        <button>Month</button>
+                        <button class="nav--button nav--button-active" onclick="switchDisplay('day')" id="nav--day">Day</button>
+                        <button class="nav--button" onclick="switchDisplay('week')" id="nav--week">Week</button>
+                        <button class="nav--button" onclick="switchDisplay('month')" id="nav--month">Month</button>
                     </div>
                 </div>
-                <div class="schedule--container">
-                    <div class="tasks--container">
+                <div class="schedule--container" id="schedule--container">
+                    <div class="tasks--container" id="tasks--container">
                         <div class="tasks--item tasks-done">
                             <p>Open your curtains</p>
                         </div>
-                        <div class="tasks--item tasks-open">
+                        <div class="tasks--item tasks-open" id="tasks-open">
                             <p>Brush your teeth</p>
                         </div>
                         <div class="tasks--item tasks-closed">
@@ -46,33 +49,11 @@
                             <p>Use the dishwasher</p>
                         </div>
                     </div>
-                    <div class="schedule-time"><p>01:00</p></div>
-                    <div class="schedule-time"><p>02:00</p></div>
-                    <div class="schedule-time"><p>03:00</p></div>
-                    <div class="schedule-time"><p>04:00</p></div>
-                    <div class="schedule-time"><p>05:00</p></div>
-                    <div class="schedule-time"><p>06:00</p></div>
-                    <div class="schedule-time"><p>07:00</p></div>
-                    <div class="schedule-time"><p>08:00</p></div>
-                    <div class="schedule-time"><p>09:00</p></div>
-                    <div class="schedule-time"><p>10:00</p></div>
-                    <div class="schedule-time"><p>11:00</p></div>
-                    <div class="schedule-time"><p>12:00</p></div>
-                    <div class="schedule-time"><p>13:00</p></div>
-                    <div class="schedule-time"><p>14:00</p></div>
-                    <div class="schedule-time"><p>15:00</p></div>
-                    <div class="schedule-time"><p>16:00</p></div>
-                    <div class="schedule-time"><p>17:00</p></div>
-                    <div class="schedule-time"><p>18:00</p></div>
-                    <div class="schedule-time"><p>19:00</p></div>
-                    <div class="schedule-time"><p>20:00</p></div>
-                    <div class="schedule-time"><p>21:00</p></div>
-                    <div class="schedule-time"><p>22:00</p></div>
-                    <div class="schedule-time"><p>23:00</p></div>
-                    <div class="schedule-time"><p>24:00</p></div>
+                    <div id="schedule-time--container"></div> <!-- Generated with js on line: 26 -->
                 </div>
             </div>
         </div>
+        <script src="js/taskOverview.js"></script>
     </body>
 
 
