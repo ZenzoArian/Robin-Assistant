@@ -55,10 +55,11 @@
     cursor: pointer;
 }
 
-.button--div .forgotPassword--div, .button--div .singIn--div {
+.button--div .forgotPassword--div, .button--div .singIn--div, .button--div .logout--div {
     margin: 10px 0 0 0;
 }
-.button--div .forgotPassword--div .forgotPasswordLink, .button--div .singIn--div .singInLink {
+.button--div .forgotPassword--div .forgotPasswordLink, .button--div .singIn--div .singInLink, 
+.button--div .logout--div .logoutLink {
     color: #928FDF;
     text-decoration: none;
     font-size: 12px;
