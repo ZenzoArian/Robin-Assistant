@@ -112,5 +112,5 @@ for (var i = 0; i < selectedDay.length; i++) {
 
 //redirect user to clicked task
 var testy = document.getElementById('tasks-open').onclick = function() { 
-    window.location.href = "#";
+    window.location.href = "task.html";
 };

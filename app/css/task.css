@@ -1,0 +1,134 @@
+.main-mobile {
+    position: relative;
+}
+
+#main-task--container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.task--page {
+    height: 100%;
+}
+
+.task--timerBar-container {
+    width: 100%;
+    height: 1%;
+    background-color: rgb(92,183,138,0.5);
+    overflow: hidden;
+}
+
+.task--timerBar {
+    width: 0%;
+    height: 100%;
+    background-color: #5CB78A;
+    border-radius: 0 30px 30px 0;
+    transition: width ease-in 0.2s;
+}
+
+.task--container {
+    height: 99%;
+    padding: 0 20px;
+}
+
+.task--header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    color: #5CB78A;
+}
+
+.task--content-container {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.task--image-container {
+    width: 100%;
+}
+
+.task--image-container img{
+    width: 100%;
+}
+
+.task--text-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.task--nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.task--nav-container button{
+    height: 35px;
+    background-color: #ffffff;
+    border: none;
+    color: #928FDF;
+    font-size: 16px;
+    cursor: pointer;
+}
+.task--nav-container button:focus {
+    outline: none;
+}
+
+.task--nav-container button:nth-of-type(2n + 0){
+    opacity: 0.5;
+    cursor: default;
+}
+
+.task--complete-container {
+    position: absolute;
+    z-index: 10px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255,255,255,0.8);
+}
+
+.task--complete-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #5CB78A;
+    height: 400px;
+    width: 80%;
+    font-size: 29px;
+    text-align: center;
+}
+
+.task--complete-content-container button {
+    height: 35px;
+    width: 100%;
+    background-color: #928FDF;
+    border: 1px solid #928FDF;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.task--complete-content-container button:focus {
+    outline: none;
+}
+
+.task--complete-button {
+    width: 60%;
+}
