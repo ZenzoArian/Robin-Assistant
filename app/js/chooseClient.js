@@ -1,4 +1,5 @@
 syncButton = document.getElementById('syncButton');
+syncButton.disabled = true;
 clientName1 = document.getElementById('clientName1');
 clientName2 = document.getElementById('clientName2');
 clientName3 = document.getElementById('clientName3');
@@ -14,9 +15,11 @@ function handleInputCheckbox() {
     if (checkbox1.checked || checkbox2.checked || checkbox3.checked || checkbox4.checked || checkbox5.checked) {
         syncButton.style.color = '#fff';
         syncButton.style.backgroundColor = '#928FDF';
+        syncButton.disabled = false;
     } else {
         syncButton.style.color = '#928FDF';
         syncButton.style.backgroundColor = '#fff';
+        syncButton.disabled = true;
     }
 
     if (checkbox1.checked) {
@@ -48,4 +51,25 @@ function handleInputCheckbox() {
     } else {
         clientName5.style.color = "#1A1818";
     }
+}
+
+function ckChange(ckType){
+    var ckName = document.getElementsByName(ckType.name);
+    var checked = document.getElementById(ckType.id);
+
+    if (checked.checked) {
+      for(var i=0; i < ckName.length; i++){
+
+          if(!ckName[i].checked){
+              ckName[i].disabled = true;
+          }else{
+              ckName[i].disabled = false;
+          }
+      } 
+    }
+    else {
+      for(var i=0; i < ckName.length; i++){
+        ckName[i].disabled = false;
+      } 
+    }    
 }

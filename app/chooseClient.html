@@ -23,7 +23,7 @@
                             <img src="images/clientIcon.png" alt="icon of a client">
                             <p id="clientName1">Esther Dobson</p>
                             <label class="container-checkbox">
-                                <input type="checkbox" id="checkbox1" name="checkbox1" onchange="handleInputCheckbox(this)"> 
+                                <input type="checkbox" id="checkbox1" name="checkboxClient" onClick="ckChange(this)" onchange="handleInputCheckbox(this)"> 
                                 <span class="checkmark"></span>
                             </label>
                         </div>
@@ -31,7 +31,7 @@
                             <img src="images/clientIcon.png" alt="icon of a client">
                             <p id="clientName2">William Whatley</p>
                             <label class="container-checkbox">
-                                <input type="checkbox" id="checkbox2" name="checkbox2" onchange="handleInputCheckbox(this)">
+                                <input type="checkbox" id="checkbox2" name="checkboxClient" onClick="ckChange(this)" onchange="handleInputCheckbox(this)">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
@@ -39,7 +39,7 @@
                             <img src="images/clientIcon.png" alt="icon of a client">
                             <p id="clientName3">Roy Gleason</p>
                             <label class="container-checkbox">
-                                <input type="checkbox" id="checkbox3" name="checkbox3" onchange="handleInputCheckbox(this)">
+                                <input type="checkbox" id="checkbox3" name="checkboxClient" onClick="ckChange(this)" onchange="handleInputCheckbox(this)">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
@@ -47,7 +47,7 @@
                             <img src="images/clientIcon.png" alt="icon of a client">
                             <p id="clientName4">Maryrose L Salas</p>
                             <label class="container-checkbox">
-                                <input type="checkbox" id="checkbox4" name="checkbox4" onchange="handleInputCheckbox(this)">
+                                <input type="checkbox" id="checkbox4" name="checkboxClient" onClick="ckChange(this)" onchange="handleInputCheckbox(this)">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
@@ -55,13 +55,15 @@
                             <img src="images/clientIcon.png" alt="icon of a client">
                             <p id="clientName5">Kenneth Johnson</p>
                             <label class="container-checkbox">
-                                <input type="checkbox" id="checkbox5" name="checkbox5" onchange="handleInputCheckbox(this)">
+                                <input type="checkbox" id="checkbox5" name="checkboxClient" onClick="ckChange(this)" onchange="handleInputCheckbox(this)">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
                     </div>
                     <div class="button--div">
-                        <button type="button" value="button" class="syncButton" id="syncButton">Sync</button>
+                        <form action="tasksOverview.html">
+                            <button type="submit" value="submit" class="syncButton" id="syncButton">Sync</button>
+                        </form>
                         <br>
                         <div class="logout--div">
                             <a href="index.html" class="logoutLink">Logout</a>
