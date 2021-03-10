@@ -1,0 +1,94 @@
+.main--container {
+    margin: 50px 0 0 50px;
+}
+
+
+.info-page-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.info-page-content .sub-all {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.info-page-top p, .info-page-bottom p {
+    color: #777777;
+}
+
+.info-page-content .sub-details p:nth-child(3) {
+    color: #777777;
+}
+
+.content-header.info-page {
+    height: 100%;
+}
+
+.sub-all {
+    border-left: 3px solid #928FDF;
+}
+.sub-details {
+    padding-left: 10px;
+}
+.sub-details h1 {
+    margin: 0;
+}
+.sub-details p {
+    margin: 10px 0 5px 0; 
+}
+.sub-details button {
+    margin-bottom: 3px;
+}
+
+.line-bottom-sub {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 60px;
+    height: 1px;
+    border-bottom: 2px solid #928FDF;
+}
+
+
+@media (min-width: 768px) {
+    .info-page-content .sub-all {
+        width: 100%;
+    }
+    .info-page-content {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .info-page-content .sub-all {
+        width: 48%;
+        margin-left: 10px;
+    }
+    .info-page-content {
+        width: 100%;
+    }
+}
+@media (min-width: 1200px) {
+    .info-page-content {
+        width: 100%;
+    }
+    .info-page-content .sub-all {
+        width: 32%;
+    }
+}
+@media (min-width: 1440px) {
+    .info-page-content {
+        width: 100%;
+    }
+}
+@media (min-width: 1920px) {
+    .info-page-content {
+        width: 80%;
+    }
+}
+@media (min-width: 2560px) {
+    .info-page-content {
+        width: 50%;
+    }
+}
+
+
