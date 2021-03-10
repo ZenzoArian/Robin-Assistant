@@ -3,3 +3,7 @@ html, body {
     padding: 0;
     width: 100%;
 }
+
+.remove-link {
+    text-decoration: none;
+}
