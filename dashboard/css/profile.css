@@ -1,0 +1,135 @@
+.profile--main-container {
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile--container {
+    margin-top: 80px;
+    width: 80%;
+    max-width: 1300px;
+}
+
+.profile--title-container p{
+    margin: 20px 0;
+}
+
+.profile--title-line {
+    border-bottom: 3px solid var(--purple);
+    width: 60px;
+    margin-bottom: 40px;
+}
+
+.profile--content-container {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.profile--forms-container {
+    display: flex;
+    flex-flow: wrap;
+    flex: 1 1 0px;
+}
+
+.profile--forms-sub-container {
+    display: flex;
+    flex-flow: wrap;
+    flex: 1 1 0px;
+}
+
+.profile--form {
+    height: 100px;
+}
+
+.profile--form input, 
+.profile--form textarea {
+    margin: 15px 0;
+    width: 250px;
+    height: 30px;
+    border: 1px solid var(--purple);
+    border-radius: 3px;
+    color: #1A1818;
+    padding: 5px;
+    font-size: 14px;
+    resize: none;
+    font-family: 'Gilroy-Light';
+}
+
+.profile--forms-sub-container:nth-last-of-type(1) input, 
+.profile--form:nth-last-of-type(1) textarea {
+    height: 60px;
+}
+.profile--form input::placeholder {
+    color: #1A1818;
+    opacity: 50%;
+}
+.profile--form input:focus, textarea:focus, select:focus, button:focus{
+    outline: none;
+}
+
+.profile--general-container {
+    display: flex;
+    flex: 1 1 0px;
+}
+
+.profile--general-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0px;
+    border-left: 3px solid var(--purple);
+    padding-left: 30px;
+    text-align: center;
+}
+
+.profile--general-sub-container .fa-user-circle::before {
+    font-size: 150px;
+}
+.profile--general-sub-container .user-icon {
+    margin: 0 0 20px 0;
+}
+
+.profile--general-sub-container p:first-of-type{
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.profile--general-sub-container p:last-of-type {
+    max-width: 300px;
+}
+
+.profile--button-container {
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.profile--button-container button {
+    width: 300px;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid var(--purple);
+    border-radius: 30px;
+    color: var(--purple);
+    font-size: 16px;
+    transition: .3s ease;
+    text-transform: capitalize;
+}
+
+.profile--save-button-active {
+    background-color: var(--purple)!important;
+    color: #ffffff!important;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 460px) {
+    .profile--general-sub-container .fa-user-circle::before {
+        font-size: 100px;
+    }
+    .profile--general-sub-container {
+        margin-top: 40px;
+    }
+  }
