@@ -1,6 +1,7 @@
 let saveButton = document.getElementById('profile--save-button');
 function valueChanged(changedValue) {
     saveButton.classList.add('profile--save-button-active');
+    saveButton.innerHTML = 'save changes';
     if (changedValue) {updateProfile(changedValue);}
 }
 
