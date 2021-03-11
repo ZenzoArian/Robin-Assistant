@@ -1,5 +1,5 @@
 .main--container {
-    margin: 50px 0 0 50px;
+    margin: 5px 0 0 5px;
 }
 
 
@@ -51,6 +51,10 @@
 
 
 @media (min-width: 768px) {
+    .main--container {
+        margin: 50px 0 0 50px;
+    }
+
     .info-page-content .sub-all {
         width: 100%;
     }
@@ -58,6 +62,7 @@
         width: 100%;
     }
 }
+
 @media (min-width: 992px) {
     .info-page-content .sub-all {
         width: 48%;
