@@ -119,6 +119,7 @@ body {
     width: 400px;
     height: 185px;
     border-radius: 20px;
+   
   }
   
   .cards {
@@ -126,7 +127,23 @@ body {
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
+    margin-left: 23px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @media only screen and (max-width: 1650px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+  }
+  @media only screen and (max-width: 1250px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+  }
+  @media only screen and (max-width: 850px) {
+    .cards {
+        grid-template-columns: 1fr;
+      }
   }
 .button{
     text-align: center;
