@@ -305,3 +305,6 @@ body {
   .image-subtask{
     height: 120px;
   }
+  .timer{
+      margin-left: 5px;
+  }
