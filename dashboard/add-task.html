@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/add-style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel=stylesheet href="css/main.css" >
     <script src="https://kit.fontawesome.com/16c2c611aa.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+
 <body>
+    <script>
+        function choose(el) {
+            el.classList.add("selected");
+        }
+    </script>
     <header class="header">
         <script src="js/header.js"></script>
         <div class="header-top flex">
@@ -96,7 +105,7 @@
     <h1 class="title">1. Select task - Wendy Wellesly</h1>
 
     <div class="cards">
-        <div class="card" onclick="choose()">
+        <div class="card" onclick="choose(this)">
             <h2>Take a shower</h2>
             <img src="assets/pictograms/shower.png" class="pictogram">
         </div>
@@ -228,11 +237,12 @@
             <h2>Take a shower</h2>
             <img src="assets/pictograms/wash-machine.png" class="pictogram">
         </div>
-      </div>
-      <a href="add-task2.html" class="link">
-      <div class="button">
-        Next
-      </div>
+    </div>
+    <a href="add-task2.html" class="link">
+        <div class="button">
+            Next
+        </div>
     </a>
 </body>
+
 </html>
