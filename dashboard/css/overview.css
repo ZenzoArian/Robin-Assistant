@@ -109,8 +109,13 @@ table, tr, th, td {
     color: rgba(0, 0, 0, .5);
 }
 
-.task-bubbles span {
+.task-bubbles {
+    cursor: default;
+}
+
+.task-bubbles > span {
     display: inline-flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     background-color: #FF0089;
@@ -120,7 +125,7 @@ table, tr, th, td {
     border-radius: 100px;
     margin-right: .5rem;
     color: #fff;
-    cursor: default;
+    cursor: pointer;
 }
 
 .task-bubbles span:nth-child(2) {
@@ -143,6 +148,8 @@ table, tr, th, td {
     height: 1.2rem;
     background-color: #FF0089;
     border-radius: 100px;
+    position: relative;
+    cursor: pointer;
 }
 
 .task-column {
@@ -157,17 +164,18 @@ table, tr, th, td {
 }
 
 .task-column:nth-child(2) span,
-.task-column:nth-child(2) .day-task {
+.task-column:nth-child(2) .task-name {
     background-color: #0093FF;
 }
 
 .task-column:nth-child(3) span,
-.task-column:nth-child(3) .day-task {
+.task-column:nth-child(3) .task-name {
     background-color: #00A326;
 }
 
 .task-column .invisible {
     opacity: 0;
+    visibility: hidden;
 }
 
 .task-column .quarter {
@@ -195,8 +203,73 @@ table, tr, th, td {
     text-align: center;
     font-size: 1.3rem;
     color: #fff;
-    background-color: #FF0089;
-    padding: .5rem 1rem;
     margin-bottom: .8rem;
+}
+
+.task-name {
     cursor: pointer;
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+    background-color: #FF0089;
+}
+
+.task-steps {
+    background-color: rgba(255,0,137,.5);
+    padding: .5rem 1rem;
+    line-height: 1.5rem;
+    cursor: default;
+    text-align: left;
+    overflow: hidden;
+    max-height: 0;
+    margin-top: -1rem;
+    z-index: -1;
+    position: relative;
+    transition: max-height 500ms ease-in-out,
+    margin-top 500ms ease-in-out;
+}
+
+.task-steps.open {
+    margin-top: 0;
+    max-height: 500px;
+}
+
+.task-column:nth-child(2) .task-steps {
+    background-color: rgba(0,147,255,.5);
+}
+
+.task-column:nth-child(3) .task-steps {
+    background-color: rgba(0,163,38,.5);
+}
+
+.popup {
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid var(--purple);
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 1rem);
+    z-index: 5;
+    display: none;
+    white-space: nowrap;
+    padding: .5rem 1rem;
+}
+
+.popup::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 50%;
+    left: -.7rem;
+    transform: translateY(-50%) rotate(45deg);
+    border-left: 2px solid var(--purple);
+    border-bottom: 2px solid var(--purple);
+    background-color: #fff;
+}
+
+.purple {
+    background-color: #fff !important;
+    color: var(--purple);
+    display: inline !important;
 }
