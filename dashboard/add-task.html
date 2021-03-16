@@ -13,11 +13,6 @@
 </head>
 
 <body>
-    <script>
-        function choose(el) {
-            el.classList.add("selected");
-        }
-    </script>
     <header class="header">
         <script src="js/header.js"></script>
         <div class="header-top flex">
@@ -105,7 +100,7 @@
     <h1 class="title">1. Select task - Wendy Wellesly</h1>
 
     <div class="cards">
-        <div class="card" onclick="choose(this)">
+        <div class="card">
             <h2>Take a shower</h2>
             <img src="assets/pictograms/shower.png" class="pictogram">
         </div>
@@ -243,6 +238,17 @@
             Next
         </div>
     </a>
+    <script>
+        let cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+            card.addEventListener("click", () => {
+                cards.forEach(card => {
+                    card.classList.remove("selected");
+                })
+                card.classList.toggle("selected");
+            })
+        });
+    </script>
 </body>
 
 </html>
