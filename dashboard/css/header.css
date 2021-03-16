@@ -22,10 +22,6 @@ body {
     justify-content: space-between;
 }
 
-:root {
-    --purple: #928FDF;
-}
-
 .header-top {
     min-height: 100px;
     max-height: 150px;

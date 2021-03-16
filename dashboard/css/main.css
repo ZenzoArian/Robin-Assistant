@@ -1,3 +1,7 @@
+:root {
+    --purple: #928FDF;
+}
+
 html, body {
     margin: 0;
     padding: 0;

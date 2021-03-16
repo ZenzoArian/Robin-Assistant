@@ -1,0 +1,202 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    padding: 5vh 5vw;
+    flex-grow: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.btn-container {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 5vw;
+}
+
+.button {
+    font-size: 1.5rem;
+    padding: .8em 1.2em;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--purple);
+    color: white;
+    border-radius: 200px;
+    margin-bottom: .8em;
+    cursor: pointer;
+}
+
+.btn-off {
+    border: 2px solid var(--purple);
+    background-color: #fff;
+    color: var(--purple);
+}
+
+table, tr, th, td {
+    display: block;
+}
+
+.calendar {
+   align-self: stretch;
+   width: 80%;
+   border: 3px solid var(--purple);
+   border-radius: 2rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.calendar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 1rem;
+    border-bottom: 3px solid var(--purple);
+}
+
+.calendar-arrow {
+    color: var(--purple);
+    font-size: 3.5rem;
+}
+
+.calendar-daynames {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    border-bottom: 3px solid var(--purple);
+}
+
+.dayname {
+    border-right: 3px solid var(--purple);
+    font-size: 1.7rem;
+    padding: .5rem;
+    text-align: left;
+    width: calc(100% / 7);
+    overflow: hidden;
+}
+
+.dayname:last-of-type {
+    border-right: none;
+}
+
+.calendar-days {
+    display: flex;
+    flex-grow: 1;
+    border-bottom: 1px solid var(--purple);
+}
+
+.calendar-days:last-of-type {
+    border-bottom: none;
+}
+
+.day {
+    width: calc(100% / 7);
+    border-right: 1px solid var(--purple);
+    font-size: 1.3rem;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.day:last-of-type {
+    border-right: none;
+}
+
+.day.faded-out {
+    color: rgba(0, 0, 0, .5);
+}
+
+.task-bubbles span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF0089;
+    font-size: 1.1rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 100px;
+    margin-right: .5rem;
+    color: #fff;
+    cursor: default;
+}
+
+.task-bubbles span:nth-child(2) {
+    background-color: #0093FF;
+}
+
+.task-bubbles span:nth-child(3) {
+    background-color: #00A326;
+}
+
+.week-task-bubbles {
+    display: flex;
+    flex-grow: 1;
+    margin-top: .5rem;
+}
+
+.week-task-bubbles span {
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #FF0089;
+    border-radius: 100px;
+}
+
+.task-column {
+    margin-right: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.task-column span {
+    margin-bottom: .5rem;
+}
+
+.task-column:nth-child(2) span,
+.task-column:nth-child(2) .day-task {
+    background-color: #0093FF;
+}
+
+.task-column:nth-child(3) span,
+.task-column:nth-child(3) .day-task {
+    background-color: #00A326;
+}
+
+.task-column .invisible {
+    opacity: 0;
+}
+
+.task-column .quarter {
+    margin-top: 10vh;
+}
+
+.task-column .middle {
+    margin: auto 0;
+}
+
+.task-column .end {
+    margin-top: auto;
+}
+
+.day-overview {
+    padding: 20px;
+}
+
+.day-tasks {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.day-task {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fff;
+    background-color: #FF0089;
+    padding: .5rem 1rem;
+    margin-bottom: .8rem;
+    cursor: pointer;
+}
