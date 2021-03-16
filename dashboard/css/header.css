@@ -118,6 +118,7 @@ li.patient-container{
     z-index: 10;
     position: relative;
     background: white;
+    cursor: pointer;
 }
 
 .patient.flex { 
@@ -142,6 +143,7 @@ ul.patient-list.flex {
     color: var(--purple);
     padding: 10px 12px;
     background: #fff;
+    cursor: pointer;
 }
 .patient.options.flex a {
     text-decoration: none;
@@ -197,4 +199,12 @@ ul.patient-list.flex {
     transition: .3s ease;
     text-transform: capitalize;
     cursor: pointer;
+}
+
+.question-container-icon {
+    width: auto;
+    cursor: pointer;
+}
+.question-container-icon i {
+    color: var(--purple);
 }
