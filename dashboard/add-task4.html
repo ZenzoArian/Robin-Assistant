@@ -10,39 +10,83 @@
 </head>
 <body>
     <header class="header">
+        <script src="js/header.js"></script>
         <div class="header-top flex">
-            <a href="add-task.html" class="logo-link"><img src="assets/images/logo.png" class="logo"></a>
-            <div class="user flex">
-                <i class="fas fa-user-circle user-icon"></i>
-                <p class="user-name">Welcome, Joe Bloggs.</p>
-            </div>
+            <img src="assets/images/logo.png" class="logo">
+            <a href="profile.html" class="remove-link">
+                <div class="user flex">
+                    <i class="fas fa-user-circle user-icon"></i>
+                    <p class="user-name">Welcome, Joe Bloggs.</p>
+                </div>
+            </a>
         </div>
         <nav class="patient-list-container">
             <ul class="patient-list flex">
-                <li class="patient-container flex">
-                    <div class="patient flex">
-                        <i class="fas fa-user-circle patient-icon"></i>
-                        <p class="patient-name">Juan Perez</p>
-                    </div>
-                    <i class="fas fa-angle-down"></i>
-                </li>
-                <li class="patient-container flex">
-                    <div class="patient flex">
-                        <i class="fas fa-user-circle patient-icon"></i>
-                        <p class="patient-name">Wendy Wellesley</p>
-                    </div>
-                    <i class="fas fa-angle-down"></i>
-                </li>
-                <li class="patient-container flex">
+                <li class="patient-container" id="patient-container-1" onclick="dropdownHeader1()">
                     <div class="patient flex">
                         <i class="fas fa-user-circle patient-icon"></i>
                         <p class="patient-name">Daniel Gullatt</p>
+                        <i class="fas fa-angle-down" id="patient-container-1-button"></i>
                     </div>
-                    <i class="fas fa-angle-down"></i>
+                    <div class="patient options flex">
+                        <i class="fas fa fa-calendar patient-icon"></i>
+                        <a href="monthOverview.html" class="patient-name">Overview</a>
+                    </div>
+                    <div class="patient options flex">
+                        <i class="fas fa fa-tasks patient-icon"></i>
+                        <a href="" class="patient-name">Tasks</a>
+                    </div>
                 </li>
-                <li class="patient-container flex add-patient">
+                <li class="patient-container" id="patient-container-2" onclick="dropdownHeader2()">
+                    <div class="patient flex">
+                        <i class="fas fa-user-circle patient-icon"></i>
+                        <p class="patient-name">Daniel Gullatt</p>
+                        <i class="fas fa-angle-down" id="patient-container-2-button"></i>
+                    </div>
+                    <div class="patient options flex">
+                        <i class="fas fa fa-calendar patient-icon"></i>
+                        <a href="monthOverview.html" class="patient-name">Overview</a>
+                    </div>
+                    <div class="patient options flex">
+                        <i class="fas fa fa-tasks patient-icon"></i>
+                        <a href="" class="patient-name">Tasks</a>
+                    </div>
+                </li>
+                <li class="patient-container" id="patient-container-3" onclick="dropdownHeader3()">
+                    <div class="patient flex">
+                        <i class="fas fa-user-circle patient-icon"></i>
+                        <p class="patient-name">Daniel Gullatt</p>
+                        <i class="fas fa-angle-down" id="patient-container-3-button"></i>
+                    </div>
+                    <div class="patient options flex">
+                        <i class="fas fa fa-calendar patient-icon"></i>
+                        <a href="monthOverview.html" class="patient-name">Overview</a>
+                    </div>
+                    <div class="patient options flex">
+                        <i class="fas fa fa-tasks patient-icon"></i>
+                        <a href="" class="patient-name">Tasks</a>
+                    </div>
+                </li>
+                <li class="patient-container flex add-patient" id="add-patient" onclick="addPatientClick()">
                     <div class="patient flex">
                         <i class="fas fa-user-plus patient-icon"></i>
+                        <div class="add-patient--content-container">
+                            <div>
+                                <p>Firstname</p>
+                                <input type="text" placeholder="Firstname" onclick="addPatientClick()">
+                            </div>
+                            <div>
+                                <p>Lastname</p>
+                                <input type="text" placeholder="Lastname" onclick="addPatientClick()">
+                            </div>
+                            <div>
+                                <p>Profile picture</p>
+                                <input type="file" name="filename" onclick="addPatientClick()">
+                            </div>
+                            <div>
+                                <button>Add person</button>
+                            </div>
+                        </div>
                     </div>
                 </li>
             </ul>
