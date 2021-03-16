@@ -142,3 +142,55 @@ ul.patient-list.flex {
 .patient.options.flex a {
     text-decoration: none;
 }
+
+.add-patient {
+    align-items: flex-start;
+    width: 60px;
+    overflow: hidden;
+}
+.add-patient .patient {
+    flex-direction: column !important;
+}
+
+.add-patient--content-container {
+    margin-top: 20px;
+}
+
+.add-patient-active {
+    height: 400px !important;
+    width: 280px !important;
+}
+
+.add-patient--content-container div{
+    margin-top: 10px;
+}
+
+.add-patient--content-container input {
+    margin: 15px 0;
+    width: 250px;
+    height: 30px;
+    border: 1px solid var(--purple);
+    border-radius: 3px;
+    color: #1A1818;
+    padding: 5px;
+    font-size: 14px;
+    resize: none;
+    font-family: 'Gilroy-Light';
+}
+
+.add-patient--content-container input:focus, textarea:focus, select:focus, button:focus{
+    outline: none;
+}
+
+.add-patient--content-container div button {
+    width: 100%;
+    height: 45px;
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: .3s ease;
+    text-transform: capitalize;
+    cursor: pointer;
+}

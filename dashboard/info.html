@@ -69,9 +69,26 @@
                             <a href="" class="patient-name">Tasks</a>
                         </div>
                     </li>
-                    <li class="patient-container flex add-patient">
+                    <li class="patient-container flex add-patient" id="add-patient" onclick="addPatientClick()">
                         <div class="patient flex">
                             <i class="fas fa-user-plus patient-icon"></i>
+                            <div class="add-patient--content-container">
+                                <div>
+                                    <p>Firstname</p>
+                                    <input type="text" placeholder="Firstname" onclick="addPatientClick()">
+                                </div>
+                                <div>
+                                    <p>Lastname</p>
+                                    <input type="text" placeholder="Lastname" onclick="addPatientClick()">
+                                </div>
+                                <div>
+                                    <p>Profile picture</p>
+                                    <input type="file" name="filename" onclick="addPatientClick()">
+                                </div>
+                                <div>
+                                    <button>save changes</button>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
