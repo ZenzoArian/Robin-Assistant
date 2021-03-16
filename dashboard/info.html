@@ -8,44 +8,11 @@
         <link rel=stylesheet href="css/info.css" >
         <link rel="stylesheet" href="css/header.css">
         <script src="https://kit.fontawesome.com/16c2c611aa.js" crossorigin="anonymous"></script>
-    
-<style>
-
-i.fas.fa-angle-down {
-    margin-top: 3px;
-    margin-left: 120px;
-    font-size: 20px;
-}
-
-li.patient-container{
-    overflow: hidden;
-
-    height: 300%;
-    width: 300px;
-    color: var(--purple);
-    border: 1px solid red;
-    border-top: none;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 0 10px;
-}
-
-.patient.flex {
-    align-items: unset;
-    margin-top: 10px;
-    justify-content: unset;
-}
-
-ul.patient-list.flex {
-    align-items: unset;
-}
-
-</style>
-
     </head>
 
     <body>
         <header class="header">
+            <script src="js/header.js"></script>
             <div class="header-top flex">
                 <img src="assets/images/logo.png" class="logo">
                 <a href="profile.html" class="remove-link">
@@ -57,25 +24,49 @@ ul.patient-list.flex {
             </div>
             <nav class="patient-list-container">
                 <ul class="patient-list flex">
-                    <li class="patient-container flex">
-                        <div class="patient flex">
-                            <i class="fas fa-user-circle patient-icon"></i>
-                            <p class="patient-name">Juan Perez</p>
-                        </div>
-                        <i class="fas fa-angle-down"></i>
-                    </li>
-                    <li class="patient-container flex">
-                        <div class="patient flex">
-                            <i class="fas fa-user-circle patient-icon"></i>
-                            <p class="patient-name">Wendy Wellesley</p>
-                        </div>
-                        <i class="fas fa-angle-down"></i>
-                    </li>
-                    <li class="patient-container "><!-- had eerst ook flex class -->
+                    <li class="patient-container" id="patient-container-1" onclick="dropdownHeader1()">
                         <div class="patient flex">
                             <i class="fas fa-user-circle patient-icon"></i>
                             <p class="patient-name">Daniel Gullatt</p>
-                            <i class="fas fa-angle-down"></i>
+                            <i class="fas fa-angle-down" id="patient-container-1-button"></i>
+                        </div>
+                        <div class="patient options flex">
+                            <i class="fas fa fa-calendar patient-icon"></i>
+                            <a href="monthOverview.html" class="patient-name">Overview</a>
+                        </div>
+                        <div class="patient options flex">
+                            <i class="fas fa fa-tasks patient-icon"></i>
+                            <a href="" class="patient-name">Tasks</a>
+                        </div>
+                    </li>
+                    <li class="patient-container" id="patient-container-2" onclick="dropdownHeader2()">
+                        <div class="patient flex">
+                            <i class="fas fa-user-circle patient-icon"></i>
+                            <p class="patient-name">Daniel Gullatt</p>
+                            <i class="fas fa-angle-down" id="patient-container-2-button"></i>
+                        </div>
+                        <div class="patient options flex">
+                            <i class="fas fa fa-calendar patient-icon"></i>
+                            <a href="monthOverview.html" class="patient-name">Overview</a>
+                        </div>
+                        <div class="patient options flex">
+                            <i class="fas fa fa-tasks patient-icon"></i>
+                            <a href="" class="patient-name">Tasks</a>
+                        </div>
+                    </li>
+                    <li class="patient-container" id="patient-container-3" onclick="dropdownHeader3()">
+                        <div class="patient flex">
+                            <i class="fas fa-user-circle patient-icon"></i>
+                            <p class="patient-name">Daniel Gullatt</p>
+                            <i class="fas fa-angle-down" id="patient-container-3-button"></i>
+                        </div>
+                        <div class="patient options flex">
+                            <i class="fas fa fa-calendar patient-icon"></i>
+                            <a href="monthOverview.html" class="patient-name">Overview</a>
+                        </div>
+                        <div class="patient options flex">
+                            <i class="fas fa fa-tasks patient-icon"></i>
+                            <a href="" class="patient-name">Tasks</a>
                         </div>
                     </li>
                     <li class="patient-container flex add-patient">

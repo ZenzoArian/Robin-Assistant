@@ -69,10 +69,6 @@ body {
     padding: 0 10px;
 }
 
-.patient-container:nth-child(1n+2) {
-    border-left: none;
-}
-
 .patient-container:nth-child(1) .patient {
     color: #FF0089;
 }
@@ -97,4 +93,52 @@ body {
 
 .add-patient {
     width: auto;
+}
+
+i.fas.fa-angle-down {
+    margin-top: 3px;
+    margin-left: 120px;
+    font-size: 20px;
+}
+
+li.patient-container{
+    overflow: hidden;
+
+    height: 100%;
+    color: var(--purple);
+    border: 1px solid var(--purple);
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0 0;
+    z-index: 10;
+    position: relative;
+    background: white;
+}
+
+.patient.flex { 
+    align-items: unset;
+    padding: 10px 10px 10px 10px;
+    justify-content: unset;
+}
+
+ul.patient-list.flex {
+    align-items: unset;
+}
+
+.patient-name {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.patient.options.flex {
+    border-top: 1px solid var(--purple);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--purple);
+    padding: 10px 12px;
+    background: #fff;
+}
+.patient.options.flex a {
+    text-decoration: none;
 }
