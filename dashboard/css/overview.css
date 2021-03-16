@@ -142,7 +142,8 @@ table, tr, th, td {
     margin-top: .5rem;
 }
 
-.week-task-bubbles span {
+.week-task-bubbles span,
+.task-info span {
     display: block;
     width: 1.2rem;
     height: 1.2rem;
@@ -249,7 +250,7 @@ table, tr, th, td {
     top: 50%;
     transform: translateY(-50%);
     left: calc(100% + 1rem);
-    z-index: 5;
+    z-index: 9999;
     display: none;
     white-space: nowrap;
     padding: .5rem 1rem;
@@ -272,4 +273,52 @@ table, tr, th, td {
     background-color: #fff !important;
     color: var(--purple);
     display: inline !important;
+}
+
+.task-info span {
+    display: inline;
+    background-color: transparent;
+}
+
+.task-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--purple);
+    padding: 1rem 0;
+}
+
+.task-image {
+    width: 8rem;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/pictograms/toothbrush.png);
+    filter: brightness(0);
+}
+
+.calendar .task-row:last-child .task-image {
+    background-image: url(../assets/pictograms/nagel-lakken.png);
+}
+
+.task-info-title i {
+    color: var(--purple);
+}
+
+.task-info-time {
+    margin: .5rem 0;
+}
+
+.task-edit-icons {
+    color: var(--purple);
+    font-size: 1.8rem;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.task-edit-icons i {
+    margin-left: 1rem;
+    cursor: pointer;
 }

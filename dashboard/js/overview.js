@@ -37,3 +37,19 @@ weekBubbles.forEach(bubble => {
         }
     })
 }) 
+
+let taskBubbles = document.querySelectorAll('.task-info span');
+taskBubbles.forEach(bubble => {
+    bubble.addEventListener('mouseenter', (e) => {
+        var popup = e.target.querySelector('.popup');
+        if (popup) {
+            popup.style.display = 'block';
+        }
+    })
+    bubble.addEventListener('mouseleave', (e) => {
+        var popup = e.target.querySelector('.popup');
+        if (popup) {
+            popup.style.display = 'none';
+        }
+    })
+}) 
